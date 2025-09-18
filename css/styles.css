@@ -1,0 +1,50 @@
+ body {
+      min-height: 100vh;
+      display: flex;
+      overflow-x: hidden;
+    }
+
+    #sidebar {
+      min-width: 250px;
+      max-width: 250px;
+      background-color: #040C18;
+      color: white;
+      height: 100vh;
+      position: fixed;
+      padding-top: 1rem;
+      transition: margin-left 0.3s ease;
+      z-index: 1040;
+    }
+
+    #sidebar.hide {
+      margin-left: -250px;
+    }
+
+    #sidebar .nav-link {
+      color: white;
+      padding: 1rem 1.5rem;
+      font-weight: 500;
+    }
+
+    #sidebar .nav-link:hover,
+    #sidebar .nav-link.active {
+      background-color: #F49867;
+      color: white;
+      text-decoration: none;
+    }
+
+    #content {
+      margin-left: 250px;
+      padding: 2rem;
+      flex-grow: 1;
+      transition: margin-left 0.3s ease;
+    }
+
+    #content.full {
+      margin-left: 0;
+    }
+
+    #content label {
+      font-size: 1.5rem;
+    }
+

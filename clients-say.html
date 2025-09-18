@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  
+  <!-- Navbar included from a separate file -->
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    // Load the navbar from a separate HTML file
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+
+  <div id="content">
+    <h1 class="mb-5">View All Clients Comment</h1>
+
+    <div class="d-flex justify-content-end align-items-center mb-3">  
+    
+        <a href="add-comment.html" class="btn btn-success" style="width: 200px; height: 40px;">
+          Add New Comment
+        </a>
+    
+    </div>
+
+
+
+    <div class="row">
+      <div class="table-responsive">
+        <table id="doctorsTable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Comment Title</th>
+                    <th>Comment Description</th>
+                    <th>Rating (1-5 Stars)</th>
+                    <th>Name of Commenter</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Exceptional Service</td>
+                  <td>The team was incredibly professional and attentive to my needs. Highly recommended!</td>
+                  <td>
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </td>
+                  <td>Paul</td>
+                  <td>
+                    <a href="comment1.html" class="btn btn-primary btn-sm">edit</a>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Life-Changing Experience</td>
+                  <td>I never thought I would find such amazing support. This has truly been life-changing for me.</td>
+                  <td>
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </td>
+                  <td>Julian Vidal</td>
+                  <td>
+                    <a href="comment2.html" class="btn btn-primary btn-sm">edit</a>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Grateful Beyond Words</td>
+                  <td>The level of care and attention I received was beyond my expectations. Thank you so much!</td>
+                  <td>
+                    <span class="text-warning">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                  </td>
+                  <td>Fabian Vidal</td>
+                  <td>
+                    <a href="comment3.html" class="btn btn-primary btn-sm">edit</a>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- DataTables JS & CSS -->
+       <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  
+    <script>
+      $(document).ready(function() {
+        $('#doctorsTable').DataTable();
+      });
+    </script>
+
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

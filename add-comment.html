@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <nav id="sidebar" class="d-flex flex-column">
+    <h3 class="px-3 mb-4">Dashboard</h3>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Hero</a>
+      </li>
+      <li>
+        <a href="stats.html" class="nav-link">Stats</a>
+      </li>
+      <li>
+        <a href="about.html" class="nav-link">About Us</a>
+      </li>
+      <li>
+        <a href="how-it-works.html" class="nav-link">How It Works</a>
+      </li>
+      <li>
+        <a href="best-doctors.html" class="nav-link">Best Doctors</a>
+      </li>
+      <li>
+        <a href="clients-say.html" class="nav-link active">What Clients Say</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <h1 class="mb-5">Add New Comment</h1>
+         
+
+          <div class="mb-3">
+            <label for="nameInput" class="form-label">Name of Commenter</label>
+            <input type="text" class="form-control" id="nameInput" placeholder="Enter Name of Commenter">
+          </div>
+          <div class="mb-3">
+            <label for="qualInput" class="form-label">Comment Title</label>
+            <input type="text" class="form-control" id="qualInput" placeholder="Enter Name of Comment Title">
+          </div>
+          <div class="mb-3">
+            <label for="descInput" class="form-label">Comment Description</label>
+            <textarea class="form-control" id="descInput" rows="2" placeholder="Enter Name of Comment Description"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="starInput" class="form-label">Rating (1-5 Stars)</label>
+            <input type="number" class="form-control" id="starInput" min="1" max="5">
+          </div>
+        <div class="mb-3">
+            <button type="button" class="btn btn-primary">Add New Comment</button>
+        </div>
+    
+    </div>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

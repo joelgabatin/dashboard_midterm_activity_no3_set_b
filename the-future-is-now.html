@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Navbar included from a separate file -->
+  <div id="navbar-placeholder"></div>
+
+  <script>
+    // Load the navbar from a separate HTML file
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  </script>
+
+
+  <div id="content">
+    <h1 class="mb-5">Modify what is chatgpt Section</h1>
+
+    <div class="row">
+      <div class="mb-3">
+        <label for="textArea" class="form-label" style="">Section H2</label>
+        <textarea class="form-control" id="textArea" rows="5" placeholder="Enter details">The Future is Now and You Just Need To Realize It. Step into Future Today & Make it Happen.</textarea>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <label class="col-auto form-label" for="input1">1</label>
+      <div class="col-2">
+        <input type="text" class="form-control mb-2" id="input1" value="Improving end distrusts instantly ">
+      </div>
+      <div class="col-7">
+        <textarea class="form-control" id="textArea" rows="5" placeholder="Enter details">From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded.</textarea>
+      </div> 
+      <div class="col-2">
+         <button type="button" class="btn btn-primary">Update</button>  
+      </div> 
+    </div>
+        <div class="row mt-3">
+      <label class="col-auto form-label" for="input1">2</label>
+      <div class="col-2">
+        <input type="text" class="form-control mb-2" id="input1" value="Become the tended active">
+      </div>
+      <div class="col-7">
+        <textarea class="form-control" id="textArea" rows="5" placeholder="Enter details">Considered sympathize ten uncommonly occasional assistance sufficient not. Letter of on become he tended active enable to.</textarea>
+      </div> 
+      <div class="col-2">
+         <button type="button" class="btn btn-primary">Update</button>  
+      </div> 
+    </div>
+    <div class="row mt-3">
+      <label class="col-auto form-label" for="input1">3</label>
+      <div class="col-2">
+        <input type="text" class="form-control mb-2" id="input1" value="Message or am nothing">
+      </div>
+      <div class="col-7">
+        <textarea class="form-control" id="textArea" rows="5" placeholder="Enter details">Led ask possible mistress relation elegance eat likewise debating. By message or am nothing amongst chiefly address.</textarea>
+      </div> 
+      <div class="col-2">
+         <button type="button" class="btn btn-primary">Update</button>  
+      </div> 
+    </div>    
+        <div class="row mt-3">
+      <label class="col-auto form-label" for="input1">3</label>
+      <div class="col-2">
+        <input type="text" class="form-control mb-2" id="input1" value="Really boy law county">
+      </div>
+      <div class="col-7">
+        <textarea class="form-control" id="textArea" rows="5" placeholder="Enter details">Really boy law county she unable her sister. Feet you off its like like six. Among sex are leave law built now. In built table in an rapid blush.</textarea>
+      </div> 
+      <div class="col-2">
+         <button type="button" class="btn btn-primary">Update</button>  
+      </div> 
+    </div>   
+  </div>
+
+  <!--</div> Bootstrap JS Bundle -->a
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

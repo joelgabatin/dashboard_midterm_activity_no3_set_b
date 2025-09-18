@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+      <!-- DataTables JS & CSS -->
+       <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+  
+</head>
+<body>
+  <nav id="sidebar" class="d-flex flex-column">
+    <h3 class="px-3 mb-4">Dashboard</h3>
+    <ul class="nav nav-pills flex-column mb-auto">
+      <li class="nav-item">
+        <a href="index.html" class="nav-link">Hero</a>
+      </li>
+      <li>
+        <a href="what-is-chatgpt.html" class="nav-link">what is chatgpt</a>
+      </li>
+      <li>
+        <a href="the-future-is-now.html" class="nav-link">The Future is Now</a>
+      </li>
+      <li>
+        <a href="request-early-access.html" class="nav-link">request early access</a>
+      </li>
+      <li>
+        <a href="clients-say.html" class="nav-link">What Clients Say</a>
+      </li>      
+      <li>
+        <a href="alot-is-happening.html.html" class="nav-link active">A Lot is Happening</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <h1 class="mb-5">View All Doctors</h1>
+
+    <div class="d-flex justify-content-end align-items-center mb-3">  
+    
+        <!-- Add New Blog Button triggers modal -->
+        <button type="button" class="btn btn-success" style="width: 200px; height: 40px;" data-bs-toggle="modal" data-bs-target="#addBlogModal1">
+          Add New Blog
+        </button>
+
+    </div>
+
+    <div class="row">
+      <div class="table-responsive">
+        <table id="doctorsTable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Blog Title</th>
+                    <th>Date Created</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>
+                    <img src="img/blog1.png" alt="Doctor Image" style="width: 100px; height: 100px;" />
+                  </td>
+                  <td>Exploring the Capabilities of GPT-3</td>
+                  <td>Sep 26, 2021</td>
+                  <td>
+                    <button 
+                      class="btn btn-primary btn-sm edit-blog-btn" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#editBlogModal"
+                      data-image="img/blog1.png"
+                      data-title="Exploring the Capabilities of GPT-3"
+                      data-date="Sep 26, 2021"
+                    >
+                      Edit
+                    </button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>
+                    <img src="img/blog2.png" alt="Doctor Image" style="width: 100px; height: 100px;" />
+                  </td>
+                  <td>The Future of AI with OpenAI</td>
+                  <td>Oct 26, 2021</td>
+                  <td>
+                    <button 
+                      class="btn btn-primary btn-sm edit-blog-btn" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#editBlogModal"
+                      data-image="img/blog2.png"
+                      data-title="The Future of AI with OpenAI"
+                      data-date="Oct 26, 2021"
+                    >
+                      Edit
+                    </button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>
+                    <img src="img/blog3.png" alt="Doctor Image" style="width: 100px; height: 100px;" />
+                  </td>
+                  <td>How GPT-3 is Changing the Tech Landscape</td>
+                  <td>Nov 26, 2021</td>
+                  <td>
+                    <button 
+                      class="btn btn-primary btn-sm edit-blog-btn" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#editBlogModal"
+                      data-image="img/blog3.png"
+                      data-title="How GPT-3 is Changing the Tech Landscape"
+                      data-date="Nov 26, 2021"
+                    >
+                      Edit
+                    </button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>
+                    <img src="img/blog4.png" alt="Doctor Image" style="width: 100px; height: 100px;" />
+                  </td>
+                  <td>Innovations in AI: A Deep Dive</td>
+                  <td>Jan 26, 2022</td>
+                  <td>
+                    <button 
+                      class="btn btn-primary btn-sm edit-blog-btn" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#editBlogModal"
+                      data-image="img/blog4.png"
+                      data-title="Innovations in AI: A Deep Dive"
+                      data-date="Jan 26, 2022"
+                    >
+                      Edit
+                    </button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>
+                    <img src="img/blog5.png" alt="Doctor Image" style="width: 100px; height: 100px;" />
+                  </td>
+                  <td>AI and the Road Ahead</td>
+                  <td>Feb 26, 2022</td>
+                  <td>
+                    <button 
+                      class="btn btn-primary btn-sm edit-blog-btn" 
+                      data-bs-toggle="modal" 
+                      data-bs-target="#editBlogModal"
+                      data-image="img/blog5.png"
+                      data-title="AI and the Road Ahead"
+                      data-date="Feb 26, 2022">
+                      Edit
+                    </button>
+                    <button class="btn btn-danger btn-sm">Delete</button>
+                  </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+
+        <!-- Bootstrap Modal for Adding New Blog -->
+        <div class="modal fade" id="addBlogModal1" tabindex="-1" aria-labelledby="addBlogModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <form class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="addBlogModalLabel">Add New Blog</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="blogImage" class="form-label">Blog Image</label>
+                  <input class="form-control" type="file" accept="image/*" required>
+                </div>
+                <div class="mb-3">
+                  <label for="blogTitle" class="form-label">Blog Title</label>
+                  <textarea class="form-control" rows="5" required></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="blogDate" class="form-label">Date Created</label>
+                  <input type="date" class="form-control" required>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="submit" class="btn btn-primary">Add Blog</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bootstrap Modal for Editing New Blog -->
+        <div class="modal fade" id="editBlogModal" tabindex="-1" aria-labelledby="editBlogModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-md"> <!-- Changed to medium modal -->
+            <form class="modal-content">
+              <div class="modal-header">
+          <h5 class="modal-title" id="editBlogModalLabel">Edit Blog</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+          <!-- Add an image preview to your modal -->
+          <div class="mb-3">
+            <label for="editBlogImage" class="form-label">Blog Image</label>
+            <input class="form-control" type="file" id="editBlogImage" accept="image/*" required>
+            <img id="editBlogImagePreview" src="" alt="Blog Image Preview" style="width: auto; max-width: 100%; height: 200px; margin-top: 10px; box-sizing: border-box;">
+          </div>
+
+          <script>
+            $(document).ready(function() {
+              $('#editBlogImage').on('change', function(event) {
+                var file = event.target.files[0];
+                if (file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+              $('#editBlogImagePreview').attr('src', e.target.result);
+            };
+            reader.readAsDataURL(file);
+                }
+              });
+            });
+          </script>
+
+          <div class="mb-3">
+            <label for="editBlogTitle" class="form-label">Blog Title</label>
+            <textarea class="form-control" id="editBlogTitle" rows="5" required></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="editBlogDate" class="form-label">Date Created</label>
+            <input type="date" class="form-control" id="editBlogDate" required>
+          </div>
+              </div>
+              <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Save Changes</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+    <script>
+      $(document).ready(function() {
+        $('#doctorsTable').DataTable();
+      });
+    </script>
+
+    <script>
+      $(document).ready(function() {
+        $('.edit-blog-btn').on('click', function() {
+          // Get data attributes
+          var image = $(this).data('image');
+          var title = $(this).data('title');
+          var date = $(this).data('date');
+
+          // Show image preview
+          $('#editBlogImagePreview').attr('src', image);
+          // Set modal fields
+          $('#editBlogTitle').val(title);
+          // Convert 'Sep 26, 2021' to '2021-09-26'
+          var jsDate = new Date(date);
+          var yyyy = jsDate.getFullYear();
+          var mm = String(jsDate.getMonth() + 1).padStart(2, '0');
+          var dd = String(jsDate.getDate()).padStart(2, '0');
+          $('#editBlogDate').val(`${yyyy}-${mm}-${dd}`);
+          // File input cannot be set for security reasons
+          $('#editBlogImage').val("");
+        });
+      });
+    </script>
+  </div>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
